@@ -1,0 +1,720 @@
+/*style.css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+}
+
+:root {
+    --main-color: rgb(22, 22, 90);
+    --dark-color: black;
+    --light-color: #cc6a93;
+    --text-color: hsl(0, 0%, 91%);
+}
+
+::selection {
+    color: var(--text-color);
+    background: var(--dark-color);
+}
+
+section {
+    padding: 4rem 0 3rem;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--dark-color);
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+/*HEADER*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--dark-color);
+    z-index: 100;
+}
+
+/*NAVBAR*/
+.nav {
+    display: flex;
+    padding-top: 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.logo span {
+    font-weight: 100;
+    color: var(--light-color);
+}
+
+.logo .fa-solid {
+    font-size: .6rem;
+    color: rgba(255, 255, 0, 0.815);
+    background: var(--text-color);
+    border-radius: 4rem;
+    padding: .4rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.fa {
+    color: #FFF;
+    margin-left: 3px;
+}
+
+.divider {
+    border: 1px solid #cc6a93;
+}
+
+/***************************************************************/
+/* navbar */
+.navbar {
+    min-height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0px 30px;
+}
+
+.navbar .mainul {
+    margin-left: 28rem;
+    padding-top: 1.2rem;
+}
+
+.navbar .mainul .oli {
+    float: left;
+    margin-left: 20px;
+}
+
+.navbar .mainul .oli a {
+    line-height: 4.5;
+    font-size: 1rem;
+    color: var(--light-color);
+    font-weight: 100;
+    letter-spacing: .1rem;
+}
+
+.navbar .mainul .oli a:hover {
+    color: #dd8faf;
+    transition: .2s all linear;
+}
+
+.navbar .mainul .active a:hover {
+    background: var(--dark-color);
+    transition: .2s all linear;
+}
+
+.navbar .fa {
+    color: #cc6a93;
+}
+
+/* drop down*/
+.navbar .mainul .services {
+    position: relative;
+}
+
+/*by default drop down menu is hidden*/
+.services .dropdown {
+    display: none;
+}
+
+/* when hover on services link, the dropdown menu appear */
+.services:hover .dropdown {
+    display: block;
+}
+
+/*dropdown menu design*/
+.services .dropdown {
+    position: absolute;
+    top: 55px;
+    left: -10px;
+    padding: .4rem;
+    background: var(--dark-color);
+    width: 130px;
+}
+
+.services .dropdown .ili {
+    width: 100%;
+    text-indent: 5px;
+    transition: text-indent 0.5s ease;
+    /*nice hover*/
+}
+
+.services .dropdown li:hover {
+    background: var(--light-color);
+    text-indent: 7px;
+}
+
+.services .dropdown li:hover a {
+    color: #FFF;
+}
+
+.services .dropdown a {
+    color: #cc6a93;
+    display: inline-block;
+}
+
+.navbar .fa-solid {
+    font-size: 1rem;
+}
+
+/*SEARCH BAR*/
+.search {
+    position: relative;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    margin-left: 45rem;
+    margin-bottom: 1rem;
+}
+
+.search .fas {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.search input {
+    height: 2.7rem;
+    width: 15rem;
+    margin-right: -7rem;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    outline: none;
+    border: none;
+}
+
+/*----------HOME SECTION-----------*/
+
+.home {
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgb(161 158 158 / 15%) 1%, rgb(255 255 255 / 16%) 100%);
+}
+
+.home img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.4rem;
+    z-index: -1;
+}
+
+.home-text {
+    padding-right: 4rem;
+    text-align: right;
+}
+.overlay
+{
+    background: linear-gradient(90deg, rgb(161 158 158 / 7%) 1%, rgb(255 255 255 / 15%) 100%);
+}
+.home-text h1 {
+    font-size: 1.6rem;
+    font-weight: 200;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background: var(--main-color);
+    padding: 15px 20px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%, 0% 68%);
+}
+
+.btn:hover {
+    background: rgb(42, 42, 133);
+    transition: 0.3s all linear;
+}
+
+.btn .fa-solid {
+    color: rgba(255, 255, 0, 0.884);
+}
+
+/*TRENDING*/
+.heading {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.heading .fa-solid {
+    font-size: 21px;
+    color: yellow;
+    background: white;
+    padding: 10px;
+    border-radius: 5rem;
+}
+
+/*CONTENT*/
+.box-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    position: relative;
+    border-radius: 0.5rem;
+    margin-left: 3rem;
+    margin-bottom: 1.9rem;
+}
+
+.box img {
+    width: 13rem;
+    height: 22rem;
+    border-radius: 0.5rem;
+}
+
+.box .text-box {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background: hsl(227, 14%, 20%, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    height: 8rem;
+}
+
+.box .text-box h2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*RATING*/
+.rating-download {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    background: hsl(0, 0%, 100%, 0.4);
+    padding: 4px 10px;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+
+.rating .fa-solid {
+    color: #faf102;
+    font-size: 0.9rem;
+}
+
+.rating span {
+    color: #faf102;
+    font-size: 0.9rem;
+}
+
+.box-btn .fa-solid {
+    padding: 8px;
+    background: var(--text-color);
+    border-radius: 5rem;
+    color: var(--main-color);
+    font-size: 12px;
+    margin-top: 2rem;
+}
+
+.box-btn .fa-solid:hover {
+    background: var(--light-color);
+    transition: .2s all linear;
+}
+
+/*BUTTON*/
+.next-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.next-page a {
+    background: var(--main-color);
+    padding: 12px 20px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.next-page a:hover {
+    background: var(--light-color);
+    transition: 0.3s all linear;
+}
+
+/*------------------------------SERIES----------------------------*/
+.series-head {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.series-head .fa-solid {
+    font-size: 21px;
+    color: yellow;
+    background: white;
+    padding: 10px;
+    border-radius: 5rem;
+}
+
+/*CONTENT*/
+.series-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.series-box {
+    position: relative;
+    border-radius: 0.5rem;
+    margin-left: 3rem;
+    margin-bottom: 1.9rem;
+}
+
+.series-box img {
+    width: 17rem;
+    height: 24rem;
+    border-radius: 0.5rem;
+}
+
+.series-box .series-text {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background: hsl(227, 14%, 20%, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    height: 9rem;
+}
+
+.series-box .series-text:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.series-box .series-text h2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*-------------FOOTER-------------*/
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(32, 32, 32);
+    margin-top: 2.5rem;
+    padding-left: 4rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: .8rem;
+    font-weight: 100;
+    margin-top: 2rem;
+}
+
+.footer span {
+    color: var(--light-color);
+}
+
+.social {
+    display: flex;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+
+.social .fa-brands {
+    font-size: .9rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-left: .3rem;
+    background: var(--dark-color);
+}
+
+.footer .fa-brands:hover {
+    color: var(--light-color);
+    box-shadow: 0 0 0 1px var(--light-color);
+    transition: .2s all linear;
+    cursor: pointer;
+}
+
+.social h3 {
+    margin-left: 1rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    font-size: .92222rem;
+    padding-top: 1rem;
+    text-decoration: underline;
+}
+
+.social h3 a:hover {
+    color: var(--light-color);
+    transition: .2s all linear;
+}
+
+/*-----------PRIVACY POLICY---------*/
+
+.privacy {
+    padding-top: 9rem;
+}
+
+.privacy h1 {
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 1.4rem;
+}
+
+.privacy .para {
+    padding-top: 2rem;
+}
+
+.privacy p {
+    padding-left: 6rem;
+    letter-spacing: 2px;
+    line-height: 1.7rem;
+    font-size: .9rem;
+    color: rgb(199, 191, 191);
+}
+
+.privacy h2 {
+    padding-left: 6rem;
+    padding-bottom: 3rem;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    color: rgb(199, 191, 191);
+}
+
+.privacy span:hover {
+    color: var(--light-color);
+    cursor: pointer;
+    transition: .3s all linear;
+}
+
+.privacy h4 {
+    font-size: .9rem;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+/*----------------OTHER APPS------------------*/
+
+.other-head {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.other-head .fa-solid {
+    font-size: 21px;
+    color: yellow;
+    background: white;
+    padding: 10px;
+    border-radius: 5rem;
+}
+
+/*CONTENT*/
+.other-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.other-box {
+    position: relative;
+    border-radius: 0.5rem;
+    margin-left: 3rem;
+    margin-bottom: 1.9rem;
+}
+
+.other-box img {
+    width: 17rem;
+    height: 24rem;
+    border-radius: 0.5rem;
+}
+
+.other-box .other-text {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background: hsl(227, 14%, 20%, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    height: 9rem;
+}
+
+.other-box .other-text:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.other-box .other-text h2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*VIEW PAGE*/
+.view-page {
+    margin-top: 22rem;
+    margin-left: 2rem;
+    color: rgb(204, 197, 197);
+}
+
+.view-page a:hover {
+    color: var(--light-color);
+    transition: .3s all ease-out;
+}
+
+/*-----------TRENDING MOVIES-------*/
+/*THOR*/
+.thor-link {
+    padding-top: 5rem;
+    padding-left: 9rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.thor-link a:hover {
+    color: var(--light-color);
+    transition: .2s all ease-in;
+}
+
+.thor-link .fa-solid {
+    font-size: .9rem;
+}
+
+.thor-img {
+    display: flex;
+}
+
+.thor h2 {
+    font-weight: 100;
+    padding-left: 10rem;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    padding-top: .4rem;
+    padding-bottom: .3rem;
+}
+
+.thor-img img {
+    width: 20rem;
+    height: 30rem;
+    margin-left: 10rem;
+}
+
+.thor-img .t-btn {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    padding: .8rem;
+    font-size: .7rem;
+    height: 2.7rem;
+    background: var(--main-color);
+    clip-path: polygon(86% 0, 100% 50%, 88% 100%, 0% 100%, 0 44%, 0% 0%);
+}
+
+.thor-img .t-btn:hover {
+    background: var(--light-color);
+    transition: .2s all ease-in;
+    cursor: pointer;
+}
+
+.discription pre {
+    font-size: .8rem;
+    margin-top: 7rem;
+    margin-left: -12rem;
+    letter-spacing: normal;
+}
+
+.discription pre span {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/*DOWNLOAD LINKS*/
+.download-link {
+    margin-top: 7rem;
+    margin-left: 10rem;
+}
+
+.download-link .d-btn {
+    background: var(--light-color);
+    padding: .8rem;
+    margin-left: .6rem;
+    font-size: .8rem;
+}
+
+.download-link .d-btn:hover {
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+}
+
+.watch h2 {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.watch .t-btn {
+    margin-left: 10.7rem;
+    padding: .4rem;
+    font-size: .5rem;
+    font-size: .8rem;
+    background: var(--light-color);
+}
+
+.watch .t-btn:hover {
+    background: var(--main-color);
+    cursor: pointer;
+    transition: .3s all ease-in;
+}
